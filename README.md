@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blessings Restaurant Website
 
-## Getting Started
+A premium, modern web presence for Blessings Restaurant, built with Next.js and high-end design aesthetics.
 
-First, run the development server:
+## ✨ Features
+- **Modern Design**: Premium aesthetics with a nature-inspired color palette.
+- **Responsive Layout**: Optimized for both desktop and mobile users.
+- **Menu Showcase**: Detailed and beautiful presentation of restaurant offerings.
+- **Interactive Elements**: Smooth transitions and modern UI components.
+- **Contact & Location**: Integrated maps and easy-to-reach contact information.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Getting Started
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run this project locally, follow these steps:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Prerequisites
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd blessings
+   ```
 
-## Learn More
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Requirements
+This project uses **Next.js 15+** and **React 19**.
+All dependencies are listed in `package.json`. For convenience, a `requirements.txt` is also included in the root directory for users coming from other backgrounds.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Documentation
+For detailed information about the project structure and design decisions, refer to:
+- [WEBSITE_DOCUMENTATION.md](./WEBSITE_DOCUMENTATION.md)
+- [PRD.md](./PRD.md)
