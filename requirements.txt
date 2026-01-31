@@ -1,0 +1,12 @@
+# Blessings Restaurant Website - Dependencies
+# This is a Node.js project. To install and run everything, follow these steps:
+
+# 1. Ensure you have Node.js installed (LTS version recommended).
+# 2. Open your terminal in this directory.
+# 3. Run the following command to install all required dependencies:
+npm install
+
+# 4. Once installed, run the development server:
+npm run dev
+
+# The project will be available at http://localhost:3000
