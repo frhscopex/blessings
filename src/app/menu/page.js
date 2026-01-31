@@ -50,37 +50,38 @@ export default function Menu() {
         <main className="min-h-screen bg-secondary">
 
             {/* Premium Hero Section */}
-            <section className="relative pt-32 pb-24 md:pt-48 md:pb-36 px-4 bg-accent overflow-hidden">
+            <section className="relative pt-28 pb-16 md:pt-48 md:pb-36 px-4 bg-accent overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-                <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-glow-bg" />
-                <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-glow-bg [animation-delay:2s]" />
+                <div className="absolute -top-24 -right-24 w-64 md:w-96 h-64 md:h-96 bg-primary/20 rounded-full blur-[80px] md:blur-[120px] animate-glow-bg" />
+                <div className="absolute -bottom-24 -left-24 w-64 md:w-96 h-64 md:h-96 bg-primary/10 rounded-full blur-[80px] md:blur-[120px] animate-glow-bg [animation-delay:2s]" />
 
                 <div className="relative z-10 max-w-7xl mx-auto text-center">
-                    <span className="text-primary font-bold uppercase tracking-[0.5em] text-sm mb-6 block animate-slide-up">Taste the Best</span>
-                    <h1 className="text-6xl md:text-9xl font-headings font-black text-secondary mb-8 leading-tight animate-slide-up [animation-delay:100ms]">
+                    <span className="text-primary font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-xs md:text-sm mb-4 md:mb-6 block animate-slide-up">Taste the Best</span>
+                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-headings font-black text-secondary mb-4 md:mb-8 leading-tight animate-slide-up [animation-delay:100ms]">
                         Our <span className="text-primary">Menu</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-secondary/60 max-w-2xl mx-auto font-light leading-relaxed animate-slide-up [animation-delay:200ms]">
+                    <p className="text-base md:text-xl lg:text-2xl text-secondary/60 max-w-2xl mx-auto font-light leading-relaxed animate-slide-up [animation-delay:200ms] px-2">
                         Explore our handcrafted selection of artisanal snacks and beverages, prepared fresh daily for your delight.
                     </p>
                 </div>
             </section>
 
             {/* Dynamic Filter Navigation */}
-            <div className="sticky top-16 md:top-20 z-40 py-6 md:py-10">
-                <div className="max-w-7xl mx-auto px-4 flex justify-center">
-                    <div className="bg-white/80 backdrop-blur-2xl border border-white/50 p-1.5 md:p-2 rounded-full shadow-2xl flex gap-1 md:gap-2 overflow-x-auto no-scrollbar max-w-full">
+            <div className="sticky top-16 md:top-20 z-40 py-4 md:py-10 bg-secondary/80 backdrop-blur-sm">
+                <div className="max-w-7xl mx-auto px-2 md:px-4 flex justify-center">
+                    <div className="bg-white/90 backdrop-blur-2xl border border-white/50 p-1 md:p-2 rounded-full shadow-2xl flex gap-0.5 md:gap-2 overflow-x-auto no-scrollbar max-w-full">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveFilter(cat)}
-                                className={`flex items-center gap-2 text-xs md:text-sm font-bold transition-all duration-300 px-5 md:px-10 py-2.5 md:py-4 rounded-full whitespace-nowrap ${activeFilter === cat
+                                className={`flex items-center gap-1 md:gap-2 text-[10px] md:text-sm font-bold transition-all duration-300 px-3 md:px-10 py-2 md:py-4 rounded-full whitespace-nowrap ${activeFilter === cat
                                     ? "bg-primary text-secondary shadow-xl shadow-primary/20 scale-105"
                                     : "text-accent/60 hover:text-primary hover:bg-primary/5"
                                     }`}
                             >
-                                {cat === "All" ? "✨" : MENU_DATA.find(c => c.category === cat)?.icon}
-                                {cat}
+                                <span className="text-xs md:text-base">{cat === "All" ? "✨" : MENU_DATA.find(c => c.category === cat)?.icon}</span>
+                                <span className="hidden xs:inline md:inline">{cat}</span>
+                                <span className="inline xs:hidden md:hidden text-[9px]">{cat.slice(0, 3)}</span>
                             </button>
                         ))}
                     </div>
@@ -88,8 +89,8 @@ export default function Menu() {
             </div>
 
             {/* Refined Food Listing View */}
-            <div className="max-w-7xl mx-auto px-4 pb-32 min-h-[600px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            <div className="max-w-7xl mx-auto px-3 md:px-4 pb-16 md:pb-32 min-h-[400px] md:min-h-[600px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-12 md:gap-y-10">
                     {filteredItems.map((item, i) => (
                         <div
                             key={item.id}
@@ -147,23 +148,23 @@ export default function Menu() {
             </div>
 
             {/* Custom CTA Section */}
-            <section className="bg-primary py-24 px-4 overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
+            <section className="bg-primary py-16 md:py-24 px-4 overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-white/10 rounded-full blur-[60px] md:blur-[80px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-48 md:w-64 h-48 md:h-64 bg-accent/20 rounded-full blur-[60px] md:blur-[80px] translate-y-1/2 -translate-x-1/2" />
 
                 <div className="max-w-4xl mx-auto text-center relative z-10">
-                    <h2 className="text-4xl md:text-6xl font-headings font-bold text-secondary mb-8 leading-tight">
-                        Craving something <br /> special?
+                    <h2 className="text-3xl md:text-4xl lg:text-6xl font-headings font-bold text-secondary mb-4 md:mb-8 leading-tight">
+                        Craving something <br className="hidden md:block" /><span className="md:hidden"> </span>special?
                     </h2>
-                    <p className="text-xl text-secondary/80 mb-12 max-w-xl mx-auto">
+                    <p className="text-base md:text-xl text-secondary/80 mb-8 md:mb-12 max-w-xl mx-auto px-2">
                         Our chefs are always experimenting! Text us for today's off-menu specials.
                     </p>
                     <a
                         href="https://wa.me/919475875536"
-                        className="inline-flex items-center gap-4 bg-accent text-secondary px-12 py-5 rounded-full font-bold text-xl hover:bg-secondary hover:text-accent transition-all shadow-2xl active:scale-95 group"
+                        className="inline-flex items-center gap-2 md:gap-4 bg-accent text-secondary px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-base md:text-xl hover:bg-secondary hover:text-accent transition-all shadow-2xl active:scale-95 group"
                     >
                         <span>Chat via WhatsApp</span>
-                        <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                     </a>

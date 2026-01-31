@@ -335,36 +335,36 @@ export default function Home() {
       </section>
 
       {/* ========== ABOUT SECTION ========== */}
-      <section id="about" data-section="about" className="py-32 px-4 bg-secondary">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section id="about" data-section="about" className="py-16 md:py-32 px-4 bg-secondary">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
-            <span className="text-primary font-bold uppercase tracking-[0.4em] text-sm mb-4 block">Our Story</span>
-            <h2 className="text-4xl md:text-6xl font-headings font-bold text-accent mb-12 leading-tight">
+            <span className="text-primary font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] text-xs md:text-sm mb-3 md:mb-4 block">Our Story</span>
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-headings font-bold text-accent mb-6 md:mb-12 leading-tight">
               Why Choose<br /><span className="text-primary">Blessings?</span>
             </h2>
-            <p className="text-xl text-accent/70 mb-10 leading-relaxed">
+            <p className="text-base md:text-xl text-accent/70 mb-6 md:mb-10 leading-relaxed">
               Founded in the heart of Asansol, Blessings Food Café started with a simple mission: to serve delicious, high-quality snacks in a space that feels like home.
             </p>
-            <ul className="space-y-6">
+            <ul className="space-y-4 md:space-y-6">
               {[
                 { num: "01", title: "Fresh Daily", desc: "Freshly prepared snacks every day" },
                 { num: "02", title: "Hygienic", desc: "Clean environment and kitchen" },
                 { num: "03", title: "Affordable", desc: "Quality food at fair prices" },
                 { num: "04", title: "Quick Service", desc: "Friendly staff, fast delivery" }
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-5 group">
-                  <span className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold group-hover:bg-primary group-hover:text-secondary transition-all">
+                <li key={i} className="flex items-start gap-3 md:gap-5 group">
+                  <span className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold text-sm md:text-base group-hover:bg-primary group-hover:text-secondary transition-all">
                     {item.num}
                   </span>
                   <div>
-                    <h4 className="text-lg font-bold text-accent mb-1">{item.title}</h4>
-                    <p className="text-accent/60">{item.desc}</p>
+                    <h4 className="text-base md:text-lg font-bold text-accent mb-0.5 md:mb-1">{item.title}</h4>
+                    <p className="text-accent/60 text-sm md:text-base">{item.desc}</p>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="h-[550px] rounded-[3rem] overflow-hidden shadow-2xl">
+          <div className="h-[300px] md:h-[450px] lg:h-[550px] rounded-2xl md:rounded-[3rem] overflow-hidden shadow-2xl order-first md:order-last">
             <img
               src="/images/cafe-interior.png"
               alt="Blessings Food Café Interior"
